@@ -1,0 +1,21 @@
+<div class="api-container">
+    <h1>API Data</h1>
+    <p>Below is a list of posts fetched from the JSONPlaceholder API:</p>
+  
+    <!-- Loader -->
+    <div *ngIf="isLoading" class="loader">Loading data...</div>
+  
+    <!-- Error -->
+    <div *ngIf="hasError" class="error">
+      <p>Failed to load posts. Please try again later.</p>
+    </div>
+  
+    <!-- Posts -->
+    <div *ngIf="!isLoading && !hasError">
+      <div *ngFor="let post of posts" class="post">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.body }}</p>
+      </div>
+    </div>
+  </div>
+  
