@@ -6,12 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class JsonPlaceholderService {
-  private apiUrl = 'https://jsonplaceholder.typicode.com';
+  private apiUrl = 'https://restcountries.com/v3.1/all'; // Updated to RestCountries API
 
   constructor(private http: HttpClient) {}
 
-  // Fetch posts from JSONPlaceholder API
+  // Fetch countries from RestCountries API
   getPosts(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/posts`);
+    return this.http.get<any[]>(this.apiUrl);
   }
 }

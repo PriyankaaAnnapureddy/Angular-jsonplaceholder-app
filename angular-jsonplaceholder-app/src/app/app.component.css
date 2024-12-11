@@ -24,3 +24,10 @@
     border-bottom: 2px solid green;
   }
   
+
+  .active {
+    border-bottom: 2px solid green;
+    color: #fff;
+    font-weight: bold;
+  }
+  
