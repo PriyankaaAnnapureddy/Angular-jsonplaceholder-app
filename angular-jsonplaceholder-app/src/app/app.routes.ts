@@ -4,9 +4,8 @@ import { ApiDataComponent } from './pages/api-data/api-data.component';
 import { FormComponent } from './pages/form/form.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' }, // Default route
-  { path: 'home', component: HomeComponent },          // Home page
-  { path: 'api-data', component: ApiDataComponent },   // Fetch and display API data
-  { path: 'form', component: FormComponent },          // Feedback form page
-  { path: '**', redirectTo: 'home' },                  // Wildcard route for invalid paths
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'api-data', component: ApiDataComponent },
+  { path: 'form', component: FormComponent },
 ];
